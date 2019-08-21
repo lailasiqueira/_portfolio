@@ -1,0 +1,163 @@
+/*
+Playlist que inspirou o nome : https://www.youtube.com/watch?v=l5m4pUJ9_qc
+Landing page cultural fictícia
+Escrita padrão BEM
+Display:grid;
+Responsível 
+Feito por: Laila P. Siqueira
+*/
+
+*{
+    margin:0;
+    padding:0;
+    
+}
+
+
+.container{
+    width: 100%;
+    height: auto;
+}
+
+/*------------CABEÇALHO-----------*/
+
+.cabeçalho{
+    background-color: aqua;
+    padding:10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align:center;
+    
+}
+
+.cabeçalho > h1{
+    color:white; 
+    text-shadow: #000 2px 3px 8px;   
+    
+}
+
+.cabeçalho > h1 > span{
+    color:blueviolet;
+    text-shadow: #000 2px 3px 5px;
+}
+
+        
+/*------------FIM DO CABEÇALHO-----------*/
+
+
+
+
+/*------------CONTEÚDO -----------*/
+.conteúdo{
+    background-color:blueviolet;
+    padding:60px;   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto; 
+    grid-template-areas:
+    'conteúdo_texto conteúdo_form';
+    justify-items: center;
+}
+
+/*------------FIM DO CONTEÚDO-----------*/
+
+
+/*--conteúdo texto--*/
+
+.conteúdo_texto{
+    color: white;
+    padding:20px;
+    grid-area: conteúdo_texto;
+}
+
+.conteúdo_texto-título{
+    text-align: center;
+    font-size:40px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 30px;
+    text-shadow: #000 2px 3px 5px;
+}
+
+.conteúdo_texto-parágrafo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: #000 2px 3px 10px;
+    margin-bottom: 30px;
+    
+}
+
+/*-- fim do conteúdo texto--*/
+
+/*--conteúdo form--*/
+
+.conteúdo-form{
+    grid-area: conteúdo_form;
+}
+
+.conteúdo-form_input{
+    background-color: aquamarine;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    color: white;
+    text-shadow: #000 2px 3px 5px;
+    width:100%;
+    text-align: center;
+    padding:10px;
+    border-radius: 10px;
+    box-shadow: #000 2px 3px 5px;    
+ 
+}
+
+.conteúdo-form_nome, .conteúdo-form_email {
+    margin-top:50px;
+    
+
+}
+
+.conteúdo-form_input-nome, .conteúdo-form_input-email {
+    padding:10px;
+    width: 300px;
+    border-radius: 5px;
+    
+    
+} 
+
+.conteúdo-form_botão{
+  background-color:blueviolet;
+  color: white;
+  padding: 12px 20px; 
+  border-radius: 6px;
+  cursor: pointer;
+  width: 250px;
+  text-transform: uppercase;
+  font-size: 25px;
+  text-shadow: #000 2px 3px 5px;
+  margin-top:50px;
+
+  
+}
+
+/*--fim do conteúdo form--*/
+
+
+
+/*------------MEDIA QUERY-----------*/
+
+@media (max-width:650px){
+    
+    .conteúdo{
+        
+        padding:60px;   
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr; 
+        grid-template-areas:
+        'conteúdo_texto' 'conteúdo_form';
+        justify-items: center;
+    }
+
+    .conteúdo_texto-parágrafo{
+        
+    }
+
+}
